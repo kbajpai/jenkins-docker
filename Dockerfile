@@ -9,5 +9,5 @@ RUN add-apt-repository \
    $(lsb_release -cs) \
    stable"
 RUN apt-get update  -qq \
-    && apt-get install docker-ce docker-ce-cli containerd.io -y
+    && apt-get install docker-ce docker-ce-cli containerd.io docker-compose -y
 RUN usermod -aG docker jenkins
