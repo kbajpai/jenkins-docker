@@ -1,0 +1,16 @@
+version: '3.4'
+
+services:
+  jenkins:
+    image: dev/jenkins:latest
+    ports:
+      - 8085:8080
+      - 50000:50000
+    container_name: jenkins_latest
+    build:
+      context: .
+      dockerfile: Dockerfile
+    volumes:
+      - /home/jenkins_home:/var/jenkins_home
+      - /var/run/docker.sock:/var/run/docker.sock
+    restart: always
