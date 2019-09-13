@@ -2,7 +2,7 @@ version: '2'
 
 services:
   jenkins:
-    image: jenkins/jenkins:lts
+    image: dev/jenkins:latest
     ports:
       - 8085:8080
       - 50000:50000
